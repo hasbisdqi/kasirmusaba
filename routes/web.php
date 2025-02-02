@@ -28,9 +28,4 @@ Route::put('/pelanggan/update', [PelangganController::class, 'update'])->name('p
 
 // Route::get('/register', [dashboard::class, 'register'])->name('register');
 
-// Route::get('/kasir', [KasirController::class, 'index'])->name('kasir');
-
-Route::get('/kasir', function () {
-    return view('kasir');
-});
-
+Route::get('/kasir', [\App\Http\Controllers\KasirController::class, 'index'])->name('kasir');
